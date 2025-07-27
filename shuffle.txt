@@ -1,13 +1,13 @@
-算法特点
-1. 完全随机洗牌
-	使用Fisher-Yates洗牌算法（Knuth洗牌）
-	基于当前时间的纳秒级种子生成随机数
-	时间复杂度O(n)，空间复杂度O(1)
-2. 真实发牌模拟
-	采用轮询发牌机制
-	支持自定义玩家数量和发牌数
-	自动检测牌数不足的情况
-3. 结构化设计
-	使用Card结构体表示单张牌
-	PlayerHand结构体管理玩家手牌
-	清晰的错误处理机制
+Algorithm Features​​
+1. ​​Complete Random Shuffling​​
+	Implements the Fisher-Yates Shuffle (Knuth Shuffle) algorithm.
+	Generates random numbers using nanosecond-level timestamps for seeding.
+	​​Complexity​​: O(n) time complexity, O(1) space complexity.
+​​2. Realistic Card Dealing Simulation​​
+	Employs a ​​round-robin dealing mechanism​​.
+	Supports configurable player counts and card distribution rules.
+	Automatically detects and prevents ​​insufficient card inventory​​.
+3. ​​Structured Design​​
+	Utilizes Card struct to encapsulate individual card properties.
+	Manages player hands via PlayerHand struct.
+	Implements explicit ​​error-handling protocols​​ for robustness.
