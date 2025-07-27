@@ -1,21 +1,21 @@
-算法特点说明
-1. 多组件混合架构
-	线性同余生成器（LCG）：经典随机数算法
-	Xorshift：高效位操作生成器
-	线性反馈移位寄存器（LFSR）：提供良好扩散性
-	乘法混淆：增强非线性特性
-2. 处理流程
-	[LCG更新] --> [Xorshift变换] --> [LFSR移位] --> [多状态组合] --> [最终非线性混合]
-3. 增强技术
-	64位位旋转（bit rotation）
-	大素数乘法（避免周期性）
-	多轮异或位移操作
-	状态自更新机制
-4. 统计特性优化
-	通过多重非线性操作破坏线性相关性
-	使用不同周期组件降低重复模式
-	最终输出阶段采用强扩散操作
-5. 安全增强
-	默认使用高精度时间源
-	状态初始化时进行预混淆
-	输出与输入种子无直接对应关系
+Algorithm Characteristics​​
+1. ​​Multi-Component Hybrid Architecture:​​
+	​​Linear Congruential Generator (LCG):​​ Classical random number algorithm.
+	​​Xorshift:​​ Efficient bit-manipulation generator.
+	​​Linear Feedback Shift Register (LFSR):​​ Provides strong diffusion properties.
+	​​Multiplicative Confusion:​​ Enhances non-linearity.
+​​2. Processing Flow:​​
+	[LCG Update] --> [Xorshift Transformation] --> [LFSR Shifting] --> [Multi-State Combination] --> [Final Non-Linear Mixing]
+3. ​​Enhancement Techniques:​​
+	64-bit Bit Rotation
+	Multiplication by Large Prime Numbers (to mitigate periodicity)
+	Multi-Round XOR-Shift Operations
+	State Self-Update Mechanism
+​​4. Statistical Property Optimization:​​
+	Compromising linear correlation through multiple non-linear operations.
+	Utilizing components with differing periods to reduce repetitive patterns.
+	Employing strong diffusion operations at the final output stage.
+5. ​​Security Enhancements:​​
+	Utilizes a high-precision time source by default for seeding.
+	Pre-whitening is applied during state initialization.
+	Output bears no direct, discernible relationship to the input seed.
